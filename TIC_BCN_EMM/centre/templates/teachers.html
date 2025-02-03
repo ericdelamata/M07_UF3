@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Profesores</title>
+</head>
+<body>
+    <h2 style="color: blue; text-align: center;">Registros de Profesores</h2>
+    <table border="1" style="width: 100%; text-align: left; background-color: #f0f8ff;">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Apellido 2</th>
+            <th>email</th>
+            <th>Curso</th>
+            <th>Tutor</th>
+            <th>Modulos</th>
+        </tr>
+        {% for teacher in teachers %}
+        <tr>
+            <td>{{teacher.first_name}}</td>
+            <td>{{teacher.last_name_1}}</td>
+            <td>{{teacher.last_name_2}}</td>
+            <td>{{teacher.email}}</td>
+            <td>{{teacher.course}}</td>
+            <td>{{teacher.tutor}}</td>
+            <td>{{teacher.teaching_modules}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

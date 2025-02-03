@@ -3,13 +3,11 @@ from .models import student, teacher
 # Create your views here.
 
 def students(request):
-    students = []
-    for student in data["students"]:
-        students.append(student)
+    students = data["students"]
     return render(request, 'students.html', {'students': students})
 
 def teachers(request):
-    teachers = teacher.objects.all()
+    teachers = data["teachers"]
     return render(request, 'teachers.html', {'teachers': teachers})
 
 data = {

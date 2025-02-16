@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Pàgina d'Inici</title>
+</head>
+<body>
+    <h2>Benvingut, {{ user.nom }}!</h2>
+    <p>Aquesta és la pàgina d'inici amb sessió iniciada.</p>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
